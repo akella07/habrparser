@@ -18,6 +18,7 @@ class UrlController {
 
 	public function GetSelfIndexUrl()
     {
+	//workaround to have it working in subfolder	
         return '/proxy2/';
     }
 }
