@@ -3,7 +3,7 @@ namespace App\Controller;
 
 class UrlController {
 
-	public function modify_url(string$url, $proxy_url, $victim_url)
+	public function modify_url(string $url, $proxy_url, $victim_url)
     {
 
         if(strpos($url, $victim_url) !== false) {
