@@ -10,7 +10,7 @@ use App\Controller\ContentController;
 $uri = new UrlController();
 /* Of course,$proxy_url, $victim_url should also be class variables */
 
-$proxy_url = 'https://servsrc.xyz';
+$proxy_url = 'http://localhost';
 $victim_url = 'https://habr.com';
 $target_url = $uri->modify_url($_SERVER['REQUEST_URI'], $proxy_url, $victim_url);
 
