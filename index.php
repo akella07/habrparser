@@ -16,8 +16,9 @@ $target_url = $uri->modify_url($_SERVER['REQUEST_URI'], $proxy_url, $victim_url)
 
 $content = file_get_contents($target_url);
 $dom = new \DOMDocument;
+libxml_use_internal_errors(true);
 $dom->loadHTML($content);
-
+libxml_clear_errors();
 $modifier = new ContentController();
 $modifier->modify_content($dom->getElementsByTagName('p'));
 $modifier->modify_content($dom->getElementsByTagName('span'));
